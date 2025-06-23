@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Joya de los Sachas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Joya de los Sachas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO -->
+  <header class="container my-4 text-center">
+    <h1>Joya de los Sachas</h1>
+    <h4>Información General</h4>
+  </header>
+
+  <!-- SECCIÓN PRINCIPAL CON GRID -->
+  <div class="container">
+    <h2>Ubicación y Características</h2>
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images.jpeg" class="card-img-top img-fluid" alt="Joya de los Sachas">
+          <div class="card-body">
+            <h5 class="card-title">Naturaleza</h5>
+            <p class="card-text">Joya de los Sachas es un cantón de Orellana, Ecuador, conocido por su riqueza natural y producción petrolera.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <iframe class="w-100" height="215" src="https://www.youtube.com/embed/wLBagJ9BSzU?si=Snt-Y0XW5KCbMxrD" title="YouTube video player" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-group mb-3">
+          <li class="list-group-item">Turismo natural</li>
+          <li class="list-group-item">Producción petrolera</li>
+          <li class="list-group-item">Cultura local</li>
+        </ul>
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item">Selva amazónica</li>
+          <li class="list-group-item">Ríos y cascadas</li>
+          <li class="list-group-item">Fauna y flora</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="container my-4">
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="name" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo electrónico:</label>
+        <input type="email" class="form-control" id="email" />
+      </div>
+      <div class="mb-3">
+        <label for="msg" class="form-label">Mensaje:</label>
+        <textarea class="form-control" id="msg" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+
+  <!-- COLAPSE -->
+  <div class="container my-4">
+    <button class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#collapseInfo">
+      Ver más sobre el cantón
+    </button>
+    <div class="collapse mt-3" id="collapseInfo">
+      <div class="card card-body">
+        Joya de los Sachas combina naturaleza y desarrollo económico gracias a su biodiversidad y a la actividad petrolera.
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLA -->
+  <div class="container">
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Aspecto</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Superficie</td>
+          <td>7,020 km²</td>
+        </tr>
+        <tr>
+          <td>Población</td>
+          <td>~43,000 habitantes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-center bg-light py-3 mt-4">
+    &copy; 2025 Joya de los Sachas - Todos los derechos reservados
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
