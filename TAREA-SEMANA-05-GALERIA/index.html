@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Joya de los Sachas - Galería Interactiva</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Joya de los Sachas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO -->
+  <header class="container my-4 text-center">
+    <h1>Joya de los Sachas</h1>
+    <h4>Información General</h4>
+  </header>
+
+  <!-- AQUÍ EMPIEZA LA GALERÍA INTERACTIVA -->
+  <div class="container my-4">
+    <h2>Galería Interactiva</h2>
+    <div class="mb-3">
+      <input type="url" id="image-url" class="form-control" placeholder="URL de la imagen" />
+    </div>
+    <div class="mb-3">
+      <button id="add-image" class="btn btn-primary me-2">Agregar Imagen</button>
+      <button id="remove-image" class="btn btn-danger">Eliminar Imagen Seleccionada</button>
+    </div>
+    <div id="gallery" class="gallery row"></div>
+  </div>
+
+  <!-- Aquí puedes pegar el resto de tu contenido original como la sección de ubicación, formulario, tabla, footer, etc. -->
+  
+  <!-- Por ejemplo, aquí pongo la sección de Ubicación y Características -->
+  <div class="container">
+    <h2>Ubicación y Características</h2>
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images.jpeg" class="card-img-top img-fluid" alt="Joya de los Sachas" />
+          <div class="card-body">
+            <h5 class="card-title">Naturaleza</h5>
+            <p class="card-text">Joya de los Sachas es un cantón de Orellana, Ecuador, conocido por su riqueza natural y producción petrolera.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <iframe class="w-100" height="215" src="https://www.youtube.com/embed/wLBagJ9BSzU?si=Snt-Y0XW5KCbMxrD" title="YouTube video player" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-group mb-3">
+          <li class="list-group-item">Turismo natural</li>
+          <li class="list-group-item">Producción petrolera</li>
+          <li class="list-group-item">Cultura local</li>
+        </ul>
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item">Selva amazónica</li>
+          <li class="list-group-item">Ríos y cascadas</li>
+          <li class="list-group-item">Fauna y flora</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- El resto de tu código original continúa aquí, incluyendo formulario, tabla, footer... -->
+
+  <footer class="text-center bg-light py-3 mt-4">
+    &copy; 2025 Joya de los Sachas - Todos los derechos reservados
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
