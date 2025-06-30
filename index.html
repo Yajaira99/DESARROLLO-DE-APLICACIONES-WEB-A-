@@ -32,7 +32,7 @@
     <h4>Información General</h4>
   </header>
 
-  <!-- SECCIÓN PRINCIPAL CON GRID -->
+  <!-- SECCIÓN PRINCIPAL -->
   <div class="container">
     <h2>Ubicación y Características</h2>
     <div class="row mb-4">
@@ -118,13 +118,24 @@
 
   <!-- GALERÍA INTERACTIVA -->
   <div class="container my-5">
-    <h2>Galería Interactiva</h2>
-    <div class="mb-3 d-flex gap-2 flex-wrap justify-content-center">
-      <input type="url" id="imageUrl" class="form-control w-50" placeholder="URL de la imagen" />
+    <h2 class="text-center">Galería Interactiva</h2>
+    <div id="gallery" class="d-flex flex-wrap gap-3 justify-content-center bg-light p-3 rounded shadow mb-4">
+      <!-- Imágenes agregadas aparecerán aquí -->
+       <img src="assets/sacha1.jpg" alt="sacha1" class="img-thumbnail border border-2" style="max-width: 150px;">
+       <img src="assets/sacha2.jpg" alt="sacha2" class="img-thumbnail border border-2" style="max-width: 150px;">
+       <img src="assets/sacha3.jpg" alt="sacha3" class="img-thumbnail border border-2" style="max-width: 150px;">
+    </div>
+    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+      <input
+        type="url"
+        id="imageUrl"
+        class="form-control"
+        placeholder="URL de la imagen (ej. https://... o assets-img/imagen.jpg)"
+        style="max-width: 400px;"
+      />
       <button id="addImageBtn" class="btn btn-success">Agregar Imagen</button>
       <button id="deleteImageBtn" class="btn btn-danger">Eliminar Imagen Seleccionada</button>
     </div>
-    <div id="gallery" class="d-flex flex-wrap gap-3 justify-content-center"></div>
   </div>
 
   <!-- FOOTER -->
@@ -132,6 +143,7 @@
     &copy; 2025 Joya de los Sachas - Todos los derechos reservados
   </footer>
 
+  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
