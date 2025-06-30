@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Joya de los Sachas - Galería Interactiva</title>
+  <title>Joya de los Sachas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -32,22 +32,7 @@
     <h4>Información General</h4>
   </header>
 
-  <!-- AQUÍ EMPIEZA LA GALERÍA INTERACTIVA -->
-  <div class="container my-4">
-    <h2>Galería Interactiva</h2>
-    <div class="mb-3">
-      <input type="url" id="image-url" class="form-control" placeholder="URL de la imagen" />
-    </div>
-    <div class="mb-3">
-      <button id="add-image" class="btn btn-primary me-2">Agregar Imagen</button>
-      <button id="remove-image" class="btn btn-danger">Eliminar Imagen Seleccionada</button>
-    </div>
-    <div id="gallery" class="gallery row"></div>
-  </div>
-
-  <!-- Aquí puedes pegar el resto de tu contenido original como la sección de ubicación, formulario, tabla, footer, etc. -->
-  
-  <!-- Por ejemplo, aquí pongo la sección de Ubicación y Características -->
+  <!-- SECCIÓN PRINCIPAL CON GRID -->
   <div class="container">
     <h2>Ubicación y Características</h2>
     <div class="row mb-4">
@@ -78,8 +63,71 @@
     </div>
   </div>
 
-  <!-- El resto de tu código original continúa aquí, incluyendo formulario, tabla, footer... -->
+  <!-- FORMULARIO -->
+  <div class="container my-4">
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="name" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo electrónico:</label>
+        <input type="email" class="form-control" id="email" />
+      </div>
+      <div class="mb-3">
+        <label for="msg" class="form-label">Mensaje:</label>
+        <textarea class="form-control" id="msg" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
 
+  <!-- COLAPSE -->
+  <div class="container my-4">
+    <button class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#collapseInfo">
+      Ver más sobre el cantón
+    </button>
+    <div class="collapse mt-3" id="collapseInfo">
+      <div class="card card-body">
+        Joya de los Sachas combina naturaleza y desarrollo económico gracias a su biodiversidad y a la actividad petrolera.
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLA -->
+  <div class="container">
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Aspecto</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Superficie</td>
+          <td>7,020 km²</td>
+        </tr>
+        <tr>
+          <td>Población</td>
+          <td>~43,000 habitantes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- GALERÍA INTERACTIVA -->
+  <div class="container my-5">
+    <h2>Galería Interactiva</h2>
+    <div class="mb-3 d-flex gap-2 flex-wrap justify-content-center">
+      <input type="url" id="imageUrl" class="form-control w-50" placeholder="URL de la imagen" />
+      <button id="addImageBtn" class="btn btn-success">Agregar Imagen</button>
+      <button id="deleteImageBtn" class="btn btn-danger">Eliminar Imagen Seleccionada</button>
+    </div>
+    <div id="gallery" class="d-flex flex-wrap gap-3 justify-content-center"></div>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="text-center bg-light py-3 mt-4">
     &copy; 2025 Joya de los Sachas - Todos los derechos reservados
   </footer>

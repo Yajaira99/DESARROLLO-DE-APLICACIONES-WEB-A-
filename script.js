@@ -1,35 +1,40 @@
-const addBtn = document.getElementById("add-image");
-const removeBtn = document.getElementById("remove-image");
-const imageUrl = document.getElementById("image-url");
-const gallery = document.getElementById("gallery");
-let selectedImage = null;
+// Obtener elementos del DOM
+const imageUrlInput = document.getElementById('imageUrl');
+const addImageBtn = document.getElementById('addImageBtn');
+const deleteImageBtn = document.getElementById('deleteImageBtn');
+const gallery = document.getElementById('gallery');
 
-addBtn.addEventListener("click", () => {
-  const url = imageUrl.value.trim();
-  if (!url) {
-    alert("Ingresa una URL válida.");
-    return;
-  }
+// Agregar imagen al hacer clic en el botón
+addImageBtn.addEventListener('click', () => {
+  const url = imageUrlInput.value.trim();
+  if (!url) return;
 
-  const img = document.createElement("img");
+  const img = document.createElement('img');
   img.src = url;
-  img.alt = "Imagen de galería";
-  img.addEventListener("click", () => {
-    if (selectedImage) {
-      selectedImage.classList.remove("selected");
-    }
-    img.classList.add("selected");
-    selectedImage = img;
+  img.alt = "Imagen dinámica";
+
+  // Evento para seleccionar la imagen
+  img.addEventListener('click', () => {
+    const selected = document.querySelector('#gallery img.selected');
+    if (selected) selected.classList.remove('selected');
+    img.classList.add('selected');
   });
+
   gallery.appendChild(img);
-  imageUrl.value = "";
+  imageUrlInput.value = '';
 });
 
-removeBtn.addEventListener("click", () => {
-  if (selectedImage) {
-    gallery.removeChild(selectedImage);
-    selectedImage = null;
-  } else {
-    alert("Selecciona una imagen primero.");
+// Eliminar imagen seleccionada
+deleteImageBtn.addEventListener('click', () => {
+  const selected = document.querySelector('#gallery img.selected');
+  if (selected) {
+    gallery.removeChild(selected);
+  }
+});
+
+// Atajo de teclado: Enter para agregar imagen
+imageUrlInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    addImageBtn.click();
   }
 });
